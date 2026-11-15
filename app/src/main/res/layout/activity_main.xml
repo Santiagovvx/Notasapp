@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F5F9">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <ImageView
+                android:id="@+id/imgTrofeo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_trofeo"
+                android:contentDescription="Trofeo" />
+
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calculadora de Notas"
+                android:textSize="28sp"
+                android:textColor="#1D4ED8"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tvFrase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="“Un error no significa que no sepas programar, significa que estás aprendiendo. Sigue intentando, que todo código tiene solución.”"
+                android:textSize="15sp"
+                android:textColor="#475569"
+                android:textStyle="italic"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:elevation="6dp"
+                android:background="@drawable/fondo_tarjeta">
+
+                <TextView
+                    android:id="@+id/tvSubtitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ingresa tus notas"
+                    android:textSize="20sp"
+                    android:textColor="#0F172A"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <EditText
+                    android:id="@+id/etNota1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="Nota 1"
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:background="@drawable/fondo_campo" />
+
+                <EditText
+                    android:id="@+id/etNota2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:hint="Nota 2"
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:background="@drawable/fondo_campo" />
+
+                <EditText
+                    android:id="@+id/etNota3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:hint="Nota 3"
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:background="@drawable/fondo_campo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Con cuánto pasas?"
+                    android:textSize="16sp"
+                    android:textColor="#475569"
+                    android:gravity="center" />
+
+                <RadioGroup
+                    android:id="@+id/rgNotaMinima"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <RadioButton
+                        android:id="@+id/rb30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="3.2"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:text="3.5"
+                        android:textSize="16sp" />
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbHistorial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="true"
+                    android:text="Guardar en el historial"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnCalcular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Calcular"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#1D4ED8"
+                    android:padding="14dp" />
+
+                <TextView
+                    android:id="@+id/tvResultado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    android:padding="16dp"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:textColor="#1E3A8A"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/fondo_resultado" />
+
+                <Button
+                    android:id="@+id/btnDetalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone"
+                    android:text="Ver detalle"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#3B82F6"
+                    android:padding="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Historial"
+                    android:textSize="16sp"
+                    android:textColor="#0F172A"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:id="@+id/llHistorial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
