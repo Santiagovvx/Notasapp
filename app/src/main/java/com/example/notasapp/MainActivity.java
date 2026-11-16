@@ -83,11 +83,11 @@ public class MainActivity extends AppCompatActivity {
 
                     String mensaje;
                     if (promedio >= notaMinima) {
-                        mensaje = "¡Aprobaste! 🎉";
+                        mensaje = "¡Aprobaste! ";
                         tvResultado.setTextColor(Color.parseColor("#15803D"));
                         btnDetalle.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#16A34A")));
                     } else {
-                        mensaje = "Sigue intentando 💪";
+                        mensaje = "Sigue intentando ";
                         tvResultado.setTextColor(Color.parseColor("#B91C1C"));
                         btnDetalle.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#DC2626")));
                     }
